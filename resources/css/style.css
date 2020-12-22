@@ -1,0 +1,574 @@
+
+/*basic setups*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+html,
+body {
+  background-color: #fff;
+  color: #555;
+  font-family: 'Lato','Arial','sans-serif';
+  font-size: 20px;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/*in order to clear the float after an element correctly.......the li element has the float property so that we need to use them*/
+.clearfix {zoom: 1}
+.clearfix:after {
+  content: '.';
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+/*headings*/
+
+h1 {
+  margin: 0;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 240%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+}
+h2{
+  font-size: 150%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+h2:after {
+    display: block;/*we need display it as a block */
+    height : 2px;
+    background-color:#e67e22;
+    content: "";/*for any words that below the line it must be declared so that the line can be visible*/
+    width: 100px;/*for the length of the line*/
+    margin: 0 auto;/*to centerize the line*/
+    margin-top: 30px;/*for the white space*/
+}
+h3{
+  font-size: 110%;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-bottom: 10px;
+
+}
+
+
+/*______paragraphs_______*/
+.long-copy {
+    line-height: 145%;/*and width: 70% or higher percentage is used if the paragraphs is very long enough*/  /*to align the para to the center margin-left is used*/
+    margin-left: 11%;
+}
+
+.box p {
+  font-size: 90%;
+  line-height: 145%;
+}
+
+
+/*_____icons_________*/
+.icon-big {
+    font-size: 300%;
+    display: block;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+.icon-small {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  color:#e67e22;
+  font-size: 120%;
+  margin-right: 10px;
+   /*to align text and fonts*/
+  line-height: 120%;
+  vertical-align: middle;
+  margin-top: -2px;
+
+
+}
+/*reusable contents */
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+    font-weight: 600;
+    padding-top: 2%;
+}
+
+section {
+  padding: 80px 0; /*for white spaces*/
+}
+
+.box{
+  padding:1%;
+}
+
+/*______generic links____________*/
+.scp:link,
+.scp:visited {
+  color: #e67e22;
+  text-decoration: none;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #e67e22;
+  transition: border-bottom 0.2s, color 0.2s;
+}
+.scp:hover,
+.scp:active {
+  color: #555;
+  border-bottom: 1px solid transparent;
+}
+
+
+
+/*_______buttons_________*/
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 20%;
+    transition: background-color 0.2s,border;
+}
+
+
+.btn-full:link,
+.btn-full:visited {
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: #fff;
+}
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #e67e22;
+    color: #fff;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #bf6516;
+  }
+  .btn-full:hover,
+  .bin-full:active {
+      border: 1px solid #bf6516;
+    }
+  .bin-ghost:hover,
+  .bin-ghost:active {
+    border: 1px solid  #bf6516;
+    color: #fff;
+  }
+  /*headers*/
+  header {
+      background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0, 0, 0, 0.7)),url(img/hero.jpg);
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+        background-attachment: fixed; /*its makes the image fixed its  cool effect*/
+  }
+  .hero-text-box {
+      position: absolute;
+      width: 1140px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+  }
+
+  .logo {
+    height: 100px;
+    width: auto;
+    float: left;
+  }
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 20px;
+}
+/*to select all the  li elements */
+.main-nav li {
+  display: inline-block;/*to seperate a elements to a block*/
+  margin-left: 40px;
+
+}
+
+ /*to access a inside of each element*/
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom:2px solid transparent;
+    transition: border-bottom 0.2s;
+  }
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #e67e22;
+}
+/* FEATURES*/
+.section-features .long-copy {
+  margin-bottom: 30px;
+}
+
+
+
+/*meals*/
+
+.section-meals{
+  padding: 0;
+}
+.meals-showcase {
+  list-style: none; /*to remove the bullets points*/
+  width: 100%;
+}
+.meals-showcase li {
+    display: block;
+    float: left;/*to display the elements side by side*/
+    width: 25%;
+}
+
+
+.meal-photo {
+  width:100%;
+  margin: 0;
+  overflow: hidden; /*to fit crtly in the browser*/
+  background-color: #000;
+}
+
+
+.meal-photo img {
+  opacity: 0.7;/*to make the image transparent
+  in order make them black when the background is black */
+  width: 100%;
+  height: auto;
+  transform: scale(1.15);/*to scale the image*/
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+
+
+.meal-photo img:hover {
+  transform: scale(1.03);/*makes the image blink and zoom in or out when the cursor placed on it*/
+  opacity: 1;/*when the cursor placed on a certain image the opacity is slightly increase*/
+}
+/*how its works*/
+.section-steps {
+  background-color: #f4f4f4;
+}
+
+.steps-box:first-child { /*this will select the first of the step boxes*/
+  text-align: right;/*this text align property also works for images as well*/
+  padding-right: 3%;
+  margin-top: 30px;
+
+
+}
+
+.steps-box:last-child { /*this will select the last  of the step boxes*/
+    padding-left: 3%;
+    margin-top: 70px;
+
+
+}
+
+
+.app-screen {
+  width: 40%;
+  }
+.works-step {
+  margin-bottom: 50px;
+}
+
+.works-step:last-of-type {
+  margin-bottom: 80px;
+}
+
+.works-step  div {
+  color: #e67e22;
+  border: 2px solid #e67e22;
+  display: inline-block;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  padding: 5px;
+  float: left;
+  font-size: 150%;
+  margin-right: 25px;
+}
+
+
+.btn-app img {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+
+}
+
+
+
+/*_______cities___________*/
+
+.box img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  margin-right: auto;
+  /*padding: 0.00000001%;*/
+  transform: scale(1,1);/*to scale the image*/
+  transition: transform 0.5s, opacity 0.5s;
+  opacity: .8;
+
+}
+
+.box img:hover {
+  transform: scale(1.2);/*makes the image blink and zoom in or out when the cursor placed on it*/
+  opacity: 1;/*when the cursor placed on a certain image the opacity is slightly increase*/
+}
+
+
+.city-feature {
+  margin-bottom: 5px;
+  background-color: #f4f4f4;
+}
+
+
+
+/*testimonials*/
+.section-testimonials {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)) ,  url(img/back-customers.jpg);
+  background-size: cover;    /*linear-gradient for make the background of the image darker*/
+  color: #fff;
+  background-attachment: fixed; /*its makes the image fixed its  cool effect*/
+}
+
+
+blockquote {
+  padding: 2%;
+  font-style: italic;
+  line-height: 145%;
+  position: relative;
+  margin-top: 40px;
+
+}
+blockquote:before {
+  content: "\201c";
+  font-size: 500%;   /*for quotation mark we need to use special characters for inversive(from down) we need to use "\201c" for more reference visit https://css-tricks.com/snippets/html/glyphs*/
+  display: block;
+  position: absolute; /*when we make an element with absolute position we have to ensure its parent has a relative position if we didn't do this it wouldn't be appear*/
+  top: -5px;
+  left: -5px;
+}
+
+
+cite {
+  font-size: 90%;
+  margin-top: 25px;
+  display: block;
+}
+
+
+cite img {
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+
+
+/*______SIGN UP_______*/
+.section-plans {
+  background-color: #f4f4f4;
+}
+
+
+.plan-box {
+  background-color: #fff;
+  border-radius: 5px;
+  width: 90%;
+  margin-left: 5%;
+  box-shadow: 0 2px  20px #b2bec3;     /*its a new and important property in css, first value for the x axis offset , second value for the y axis offet and next  for blur and last be the color   */
+}
+
+
+.plan-box div {
+  padding: 15px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.plan-box div:first-child{  /*to access the first element */
+  background-color: #fcfcfc;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+
+
+}
+/*to make the last element (ie) button, align at the center and them little more style*/
+.plan-box div:last-child{
+  text-align: center;
+  border: 0;
+}
+
+
+
+.plan-price {
+  font-size: 300%;
+  margin-bottom: 10px;
+  font-weight: 100;
+  color: #e67e22;
+}
+.plan-price span {
+  font-size: 30%;
+  font-weight: 300;
+
+}
+
+
+.plan-price-meal {
+  font-size: 80%;
+}
+
+.plan-box ul {
+  list-style: none;
+}
+
+.plan-box ul li {
+  padding: 5px 0;
+
+}
+
+
+
+
+/*_______________FORM______________*/
+.contact-form {
+  width: 60%;
+  margin:0 auto;
+}
+
+
+input[type=text],
+input[type=email],/*for selecting only text and email element*/
+select,
+textarea {
+  width: 100%;
+  padding:5px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type=button] {
+  background-color: #e67e01;
+}
+
+input[type=checkbox] {
+  margin: 10px 5px 10px 0;
+}
+
+/*to get rid of those borders when we focus those elements so that we have a lot of zero class here, which is called focus*/
+*:focus {outline: none}
+
+
+
+/*_________footer_______*/
+footer {
+  /*background-color: #333;*/
+  height: 200%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)) , url(img/iron-man-4k-2020-minimals-6x-3840x2160.jpg);
+  background-size: 60%;   /*linear-gradient for make the background of the image darker*/
+  background-position: center;
+
+  color: #fff;
+  padding: 50px;
+  font-size: 130%;
+  width: 100%;
+  height: auto;
+  margin-right: auto;
+  /*padding: 0.00000001%;*/
+}
+
+.footer-nav {
+  list-style: none;
+  float: left;
+}
+
+.social-links {
+  list-style: none;
+  float: right;
+}
+
+
+.footer-nav li,
+.social-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+  margin-right: 0;
+}
+
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+  text-decoration: none;
+  border: 0;
+  color: #888;
+  transition: color 0.3s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+  color: #ddd;
+}
+
+
+.social-links li a:link,
+.social-links li a:visited {
+  font-size: 200%;
+}
+.social-facebook:hover{
+  color: #3b5998;
+  transition: color 0.2s;
+}
+.social-instagram:hover{
+  Color: #833ab4;
+  transition: color 0.2s;
+}
+.social-twitter:hover{
+  color: #00aced;
+  transition: color 0.2s;
+}
+.social-linkedin:hover{
+  color: #007bb6;
+  transition: color 0.2s;
+}
+
+footer p {
+  color: #888;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer {
+
+}
